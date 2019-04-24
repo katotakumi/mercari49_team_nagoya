@@ -19,7 +19,7 @@
 - has_many :comments
 - has_many :exhibitions,through: :user_exhibitions
 - has_many :user_exhibitions
-- belong_to :address
+- has_many :address
 - belong_to :pay
 
 
@@ -28,7 +28,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true|
-|prefectures|string|null: false|
 |municipalities|string|null: false|
 |address|string|null: false|
 |building|string|null: false|
@@ -82,7 +81,7 @@
 - has_many :user_exhibitions
 - belong_to :category
 
-## itemsテーブル
+## categorysテーブル
 
 |Column|Type|Options|
 |------|----|-------|
