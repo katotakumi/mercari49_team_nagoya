@@ -20,7 +20,7 @@
 - has_many :exhibitions,through: :user_exhibitions
 - has_many :user_exhibitions
 - has_many :address
-- belong_to :pay
+- has_many :pay
 
 
 ## addressテーブル
