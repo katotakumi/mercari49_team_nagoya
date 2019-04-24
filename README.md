@@ -4,7 +4,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|nicname|string|null: false|
+|nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 |family_name|string|null: false|
@@ -19,8 +19,8 @@
 - has_many :comments
 - has_many :exhibitions,through: :user_exhibitions
 - has_many :user_exhibitions
-- has_many :address
-- has_many :pay
+- belongs_to :address
+- belongs_to :pay
 
 
 ## addressテーブル
@@ -31,10 +31,10 @@
 |municipalities|string|null: false|
 |address|string|null: false|
 |building|string|null: false|
-|phone number|integer|null: false|
+|phone_number|string|null: false|
 
 ### Association
-- belong_to :user
+- belongs_to :user
 
 ## paysテーブル
 
@@ -47,7 +47,7 @@
 |security_number|integer|null: false|
 
 ### Association
-- belong_to :user
+- belongs_to :user
 
 
 ## commentsテーブル
@@ -59,8 +59,8 @@
 |exhibitions_id|references|foreign_key: true|
 
 ### Association
-- belong_to :exhibition
-- belong_to :user
+- belongs_to :exhibition
+- belongs_to :user
 
 ## exhibitionsテーブル
 
@@ -79,7 +79,7 @@
 - has_many :images
 - has_many :users, through: :user_exhibitions
 - has_many :user_exhibitions
-- belong_to :category
+- belongs_to :category
 
 ## categorysテーブル
 
@@ -96,10 +96,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |exhibition_id|references|foreign_key: true|
-|image|text|
+|image|string|
 
 ### Association
-- belong_to :exhibition
+- belongs_to :exhibition
 
 
 ## user_exhibitionsテーブル
@@ -110,6 +110,6 @@
 |exhibition_id|references|foreign_key: true|
 
 ### Association
-- belong_to :exhibition
-- belong_to :user
+- belongs_to :exhibition
+- belongs_to :user
 
