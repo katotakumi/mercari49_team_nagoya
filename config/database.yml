@@ -50,5 +50,8 @@ test:
 production:
   <<: *default
   database: mercari49_team_nagoya_production
-  username: mercari49_team_nagoya
-  password: <%= ENV['MERCARI49_TEAM_NAGOYA_DATABASE_PASSWORD'] %>
+  # username: mercari49_team_nagoya
+  # password: <%= ENV['MERCARI49_TEAM_NAGOYA_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
