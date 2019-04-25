@@ -178,6 +178,12 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    sshkit (1.18.2)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+>>>>>>> master
 =======
     sshkit (1.18.2)
       net-scp (>= 1.1.2)
