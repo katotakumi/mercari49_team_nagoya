@@ -13,6 +13,8 @@
   background-color: beige;
   display: flex;
   font-weight: bold;
+  position: relative;
+  overflow:hidden;
 }
 
 .header_top {
@@ -22,6 +24,7 @@
   padding:0px 0px 0px 0px;
   background-color: aqua;
   font-weight: bold;
+  
 }
 
 .header_image {
@@ -41,19 +44,56 @@
 }
 
 .header_under {
-  
+  box-sizing: border-box;
+  width:800px;
+  height:80px;
+  position: absolute;
+  bottom: 0;
+  background-color: green;
 }
 
-.header_top
-      .header_image
-      .header_surch_bar
-    .header_under
-      .header_under_left
-        .header_under_category
-        .header_under_bland
-      .header_under_right
-        .header_login
-        .header_new
+.header_under_left{
+  height:80px;
+  width:50%;
+  background-color: rgb(182, 67, 67);
+  float:left;
+}
+
+.header_under_category{
+  height:80px;
+  width:200px;
+  background-color: white;
+  float:left;
+}
+
+.header_under_bland{
+  height:80px;
+  width: 200px;
+  background-color: gray;
+  float: left;
+}
+
+.header_under_right{
+  height:80px;
+  width:400px;
+  background-color: beige;
+  float: left;
+
+}
+.header_login{
+  height:80px;
+  width: 200px;
+  background-color: gray;
+  float: left;
+
+}
+.header_new{
+  height:80px;
+  width: 200px;
+  background-color: gray;
+  float: left;
+
+}
     
   
 .main {
