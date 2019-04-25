@@ -179,24 +179,9 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     sshkit (1.18.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
->>>>>>> master
-=======
-    sshkit (1.18.2)
-      net-scp (>= 1.1.2)
-      net-ssh (>= 2.8.0)
->>>>>>> master
-=======
-    sshkit (1.18.2)
-      net-scp (>= 1.1.2)
-      net-ssh (>= 2.8.0)
->>>>>>> master
     temple (0.8.1)
     thor (0.20.3)
     thread_safe (0.3.6)
@@ -232,10 +217,7 @@ DEPENDENCIES
   capistrano3-unicorn
   coffee-rails (~> 4.2)
   erb2haml
-<<<<<<< HEAD
-=======
-  font-awesome-rails
->>>>>>> master
+  font-awesome-rails_
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
