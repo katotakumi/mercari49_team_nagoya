@@ -8,9 +8,8 @@
 .header {
   box-sizing: border-box;
   width: 100vw;
-  height: 150px;
+  height: 100px;
   padding: 8px 200px 0px;
-  background-color: beige;
   display: flex;
   font-weight: bold;
   position: relative;
@@ -20,100 +19,185 @@
 .header_top {
   box-sizing: border-box;
   width: 100vw;
-  height: 60px;
+  height: 40px;
   padding:0px 0px 0px 0px;
-  background-color: aqua;
   font-weight: bold;
   
 }
 
 .header_image {
+  width:20%;
+  height:40px;
+  float: left;
   
 
 }
 .header_surch_bar{
   box-sizing: border-box;
-  width:600px;
-  height:60px;
-  float: right;
+  width: 80%;
+  height:40px;
+  float: left;
   background-color: wheat;
-  border: solid 0.1px  #d3d3d3;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  border-color:  #d3d3d3;
   color:#d3d3d3;
   background: #f5f5f5;
+  font-weight: 100;
+  line-height: 40px;
+  padding: 0px 0px 0px 10px;
+  
+}
 
+.search {
+  display: inline-block;
+  float:right;
+  padding:0px 10px 5px 5px;
+  color: black;
 }
 
 .header_under {
   box-sizing: border-box;
-  width:800px;
-  height:80px;
+  width:100vw;
+  height:40px;
   position: absolute;
   bottom: 0;
-  background-color: green;
 }
 
 .header_under_left{
-  height:80px;
+  height:40px;
   width:50%;
-  background-color: rgb(182, 67, 67);
   float:left;
 }
 
 .header_under_category{
-  height:80px;
-  width:200px;
-  background-color: white;
+  height:40px;
+  width:150px;
   float:left;
+  font-size: 14px;
 }
+
+.list {
+  display: inline-block;
+  float:left;
+  padding:0px 10px 5px 5px;
+  color:red;
+}
+
+
 
 .header_under_bland{
-  height:80px;
-  width: 200px;
-  background-color: gray;
+  height:40px;
+  width: 150px;
   float: left;
+  font-size: 14px;
 }
 
+.tag {
+  display: inline-block;
+  float:left;
+  padding:0px 10px 5px 5px;
+  color:red;
+}
+
+
 .header_under_right{
-  height:80px;
+  height:40px;
   width:400px;
-  background-color: beige;
   float: left;
 
 }
 .header_login{
-  height:80px;
-  width: 200px;
-  background-color: gray;
+  height:40px;
+  width: 100px;
   float: left;
+}
+
+.header_login_button {
+  box-sizing: border-box;
+  height:35px;
+  width:80px;
+  border-radius: 5px;
+  background-color:red;
+  padding: 8px;
+  text-align: center;
+  color: white;
+  float:left;
+  font-size: 13px;
 
 }
 .header_new{
-  height:80px;
-  width: 200px;
-  background-color: gray;
+  height:30px;
+  width: 100px;
+  float: left;
+
+}
+
+.header_new_button{
+  box-sizing: border-box;
+  border-style:solid;
+  height:35px;
+  width:110px;
+  border-width:1px;
+  border-radius: 5px;
+  border-color: #0099e8;
+  padding: 7px;
+  text-align: center;
+  color: #0099e8;
+  font-size: 13px;
   float: left;
 
 }
     
   
 .main {
+  box-sizing: border-box;
   width: 100vw;
   height: 1000px;
-  background-color:green;
-
-
 }
+
+
 .main-slide {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 400px;
+  background-color: aquamarine;
 
 }
 .main-item {
+  box-sizing: border-box;
+  width: 100%;
+  height: 600px;
+  color: black;
+  padding:40px 0px 0px 0px ;
+  font-size: 30px;
+  font-weight	:bold;
+  text-align:center;
+  
+  
+}
+
+.main-item-select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 400px;
+  padding:0px 120px;
+
+}
+.main-item-select-name{
+  box-sizing: border-box;
+  font-size: 22px;
+  color: #0099e8;
+  padding:25px;
+
 
 }
 .midol-ander {
 
 }
-
 .application {
+  box-sizing: border-box;
   width: 100vw;
   height: 250px;
   background-color: aquamarine;

@@ -2,26 +2,51 @@
   .header
     .header_top
       .header_image
-      =image_tag("logo.png",width:"150" )
+        =image_tag("logo.png",width:"150" )
       .header_surch_bar
         何かお探しですか？
-        %i.fa.fa-search 
+        %li.search
+          =fa_icon'search' , class: 'icon'
     .header_under
       .header_under_left
         .header_under_category
-          カテゴリ
+          カテゴリから探す
+          %li.list
+            =fa_icon'list-ul' , class: 'icon'
         .header_under_bland
-          ブランド
+          ブランドから探す
+          %li.tag
+            =fa_icon'tag' , class: 'icon'
       .header_under_right
         .header_login
-          ログイン
+          .header_login_button
+            ログイン
         .header_new
-          新規会員
+          .header_new_button
+            新規会員登録
     
   
   .main
     .main-slide
+      =image_tag("slide1.png",width:"1500" )
     .main-item
+      ピックアップカテゴリー
+      .main-item-select
+        .main-item-select-name
+          レディース新着アイテム
+        .main-item-all
+          .main-item-one
+            .main-item-one-image
+            .main-item-one-textbox
+              .main-item-one-text
+            .main-item-one-price
+        .main-item-one-good
+        .main-item-one-tax
+        .main-item-one-all-view
+
+
+
+
 
   .application
     
