@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # AWS関連
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
@@ -61,8 +62,12 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# ビュー周り
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'fog-aws'
+
+# ユーザー関連
+gem 'devise'
