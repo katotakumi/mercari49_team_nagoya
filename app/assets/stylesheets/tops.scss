@@ -14,19 +14,19 @@
   font-weight: bold;
   position: relative;
   overflow:hidden;
-  &_top {
+  &-top {
     box-sizing: border-box;
     width: 100vw;
     height: 40px;
     padding:0px 0px 0px 0px;
     font-weight: bold;
   }
-  &_image {
+  &-logo {
     width:20%;
     height:40px;
     float: left;
   }
-  &_surch_bar{
+  &-surch-bar{
     box-sizing: border-box;
     width: 80%;
     height:40px;
@@ -41,96 +41,89 @@
     font-weight: 100;
     line-height: 40px;
     padding: 0px 0px 0px 10px;  
-   }
-}
-.search {
-  display: inline-block;
-  padding:0px 10px 5px 5px;
-  color: black;
-}
-
-.header_under {
+    &__icon{
+        display: inline-block;
+        padding:0px 10px 5px 5px;
+        color: black;
+        float:right;
+    }
+  }
+  &-under {
   box-sizing: border-box;
   width:100vw;
   height:40px;
   position: absolute;
   bottom: 0;
-  &_left{
-    height:40px;
-    width:50%;
-    float:left;
-  }
-  &_category{
-    height:40px;
-    width:150px;
-    float:left;
-    font-size: 14px;
-  }
-}
-
-.list {
-  display: inline-block;
-  padding:0px 10px 5px 5px;
-  color:red;
-}
-
-.header_under_bland{
-  height:40px;
-  width: 150px;
-  float: left;
-  font-size: 14px;
-}
-
-.tag {
-  display: inline-block;
-  padding:0px 10px 5px 5px;
-  color:red;
-}
-
-
-.header_under_right{
-  height:40px;
-  width:400px;
-  float: left;
-
-}
-.header_login{
-  height:40px;
-  width: 100px;
-  float: left;
-  &_button {
-    box-sizing: border-box;
-    height:35px;
-    width:80px;
-    border-radius: 5px;
-    background-color:red;
-    padding: 8px;
-    text-align: center;
-    color: white;
-    float:left;
-    font-size: 13px;
-  }
-}
-.header_new{
-  height:30px;
-  width: 100px;
-  float: left;
-  &_button{
-    box-sizing: border-box;
-    border-style:solid;
-    height:35px;
-    width:110px;
-    border-width:1px;
-    border-radius: 5px;
-    border-color: #0099e8;
-    padding: 7px;
-    text-align: center;
-    color: #0099e8;
-    font-size: 13px;
-    float: left;
+    &-left{
+      height:40px;
+      width:50%;
+      float:left;
+      &-category{
+        height:40px;
+        width:150px;
+        float:left;
+        font-size: 14px;
+        &__icon {
+          display: inline-block;
+          padding:0px 10px 5px 5px;
+          color:red;
+        }
+      } 
+      &-bland{
+        height:40px;
+        width: 150px;
+        float: left;
+        font-size: 14px;
+        &__icon{
+          display: inline-block;
+          padding:0px 10px 5px 5px;
+          color:red;
+        }
+      }
+    } 
+    &-right{
+      height:40px;
+      width:400px;
+      float: left;
+      &-login{
+        height:40px;
+        width: 100px;
+        float: left;
+        &__button {
+          box-sizing: border-box;
+          height:35px;
+          width:80px;
+          border-radius: 5px;
+          background-color:red;
+          padding: 8px;
+          text-align: center;
+          color: white;
+          float:left;
+          font-size: 13px;
+        }
+      }
+      &-new{
+        height:30px;
+        width: 100px;
+        float: left;
+        &__button{
+          box-sizing: border-box;
+          border-style:solid;
+          height:35px;
+          width:110px;
+          border-width:1px;
+          border-radius: 5px;
+          border-color: #0099e8;
+          padding: 7px;
+          text-align: center;
+          color: #0099e8;
+          font-size: 13px;
+          float: left;
+        }
+      }
+    }
   }
 }
-    
   
 .main {
   box-sizing: border-box;
@@ -155,7 +148,7 @@
       width: 100%;
       height: 450px;
       padding:0px 120px;
-      &-name{
+      &__name{
         box-sizing: border-box;
         font-size: 22px;
         color: #0099e8;
@@ -172,31 +165,31 @@
       width:25%;
       height:100%;
       padding:0px 0px 0px 15px;
-      &-image{
+      &__image{
         box-sizing: border-box;
         width:100%;
         height:80%;
         padding:10px 0px 0px 0px;
       }
-      &-textbox{
+      &__textbox{
         box-sizing: border-box;
         width:100%;
         height:20%;
        }
-      &-text{
+      &__text{
         box-sizing: border-box;
         width:100%;
         height:70%;
         font-size: 15px;
       }
-      &-prices{
+      &__prices{
         box-sizing: border-box;
         width:100%;
         height:70%;
         font-size: 10px;
         float:left;
        }
-      &-price{
+      &__price{
         box-sizing: border-box;
         width:50%;
         height:30%;
@@ -204,14 +197,14 @@
         text-align: left;
         float:left;
         }
-      &-good{
+      &__good{
         box-sizing: border-box;
         width:50%;
         height:30%;
         font-size: 8px;
         display: inline-block;  
        }
-      &-tax{
+      &__tax{
         box-sizing: border-box;
         font-size: 8px;
         text-align: left;
@@ -257,6 +250,26 @@
       width:100%;
       height:10%;
       color: white;
+      &-box__li{
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        padding:10px 0px 0px 0px;
+        color: white;
+        font-size: 10px;
+      }
+      &__twitter{
+        box-sizing: border-box;
+        color:white;
+        width:10%;
+        height:10%;
+      }
+      &__facebook{
+        box-sizing: border-box;
+        color:white;
+        width:10%;
+        height:10%;
+      }
     }
     &-helps{
       box-sizing: border-box;
@@ -270,6 +283,14 @@
       width:100%;
       height:10%;
       color: white;
+      &-box__li{
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        padding:10px 0px 0px 0px;
+        color: white;
+        font-size: 10px;
+      }
     }
     &-privacys{
       box-sizing: border-box;
@@ -280,12 +301,28 @@
      }
     &-privacy{
       color: white;
+      &-box__li{
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        padding:10px 0px 0px 0px;
+        color: white;
+        font-size: 10px;
+      }
     }
     &-private{
       box-sizing: border-box;
       width:100%;
       height:10%;
       color: white;
+      &-box__li{
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        padding:10px 0px 0px 0px;
+        color: white;
+        font-size: 10px;
+      }
     }
     &-country{
       box-sizing: border-box;
@@ -294,6 +331,14 @@
       padding:20px 20px 0px 0px;
       float: left;
       color:white;
+      &__li{
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        padding:10px 0px 0px 0px;
+        color: white;
+        font-size: 10px;
+      }
     }
   &-under{
     box-sizing: border-box;
@@ -302,29 +347,6 @@
     padding:20px;
   }
   }
-}
-.li{
-  box-sizing: border-box;
-  width:100%;
-  height:100%;
-  padding:10px 0px 0px 0px;
-  color: white;
-  font-size: 10px;
-
-}
-
-.twitter{
-  box-sizing: border-box;
-  color:white;
-  width:10%;
-  height:10%;
-}
-
-.facebook{
-  box-sizing: border-box;
-  color:white;
-  width:10%;
-  height:10%;
 }
 
 .sell-button{

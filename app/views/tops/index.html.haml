@@ -1,28 +1,28 @@
 .wrapper
   .header
-    .header_top
-      .header_image
+    .header-top
+      .header-logo
         =image_tag("logo.png",width:"150" )
-      .header_surch_bar
+      .header-surch-bar
         何かお探しですか？
-        %li.search
+        .header-surch-bar__icon
           =fa_icon'search' , class: 'icon'
-    .header_under
-      .header_under_left
-        .header_under_category
+    .header-under
+      .header-under-left
+        .header-under-left-category
           カテゴリから探す
-          %li.list
+          .header-under-left-category__icon
             =fa_icon'list-ul' , class: 'icon'
-        .header_under_bland
+        .header-under-left-bland
           ブランドから探す
-          %li.tag
+          .header-under-left-bland__icon
             =fa_icon'tag' , class: 'icon'
-      .header_under_right
-        .header_login
-          .header_login_button
+      .header-under-right
+        .header-under-right-login
+          .header-under-right-login__button
             ログイン
-        .header_new
-          .header_new_button
+        .header-under-right-new
+          .header-under-right-new__button
             新規会員登録
     
   
@@ -32,21 +32,21 @@
     .main-item
       ピックアップカテゴリー
       .main-item-select
-        .main-item-select-name
+        .main-item-select__name
           レディース新着アイテム
         .main-item-all
           .main-item-one
-            .main-item-one-image
+            .main-item-one__image
               =image_tag("akabeko.png",width:"200" )
-            .main-item-one-textbox
-              .main-item-one-text
+            .main-item-one__textbox
+              .main-item-one__text
                 赤べこ
-                .main-item-one-prices
-                  .main-item-one-price
+                .main-item-one__prices
+                  .main-item-one__price
                     ¥20,000
-                  .main-item-one-good
+                  .main-item-one__good
                     =fa_icon'heart' , class: 'icon'
-                  .main-item-one-tax
+                  .main-item-one__tax
                     (税込)
         .main-item-one-all-view
           すべての商品を見る
@@ -59,72 +59,71 @@
       .footer-top-mercaris
         .footer-top-merucari
           メルカリについて
-          .ul
-            .li
+          .footer-top-merucari-box
+            .footer-top-merucari-box__li
               会社概要（運営会社）
-            .li
+            .footer-top-merucari-box__li
               採用情報
-            .li
+            .footer-top-merucari-box__li
               プレスリリース
-            .li
+            .footer-top-merucari-box__li
               公式ブログ
-            .li
+            .footer-top-merucari-box__li
               メルカリロゴ利用ガイドライン
-        .twitter
+        .footer-top-merucari__twitter
           =fa_icon'twitter' , class: 'icon'
-        .facebook
+        .footer-top-merucari__facebook
           =fa_icon'facebook' , class: 'icon'
 
       .footer-top-helps
         .footer-top-help
           ヘルプ＆ガイド
-          .ul
-            .li
+          .footer-top-help-box
+            .footer-top-help-box__li
               メルカリガイド
-            .li
+            .footer-top-help-box__li
               らくらくメルカリ便
-            .li
+            .footer-top-help-box__li
               ゆうゆうメルカリ便
-            .li
+            .footer-top-help-box__li
               大型メルカリ便
-            .li
+            .footer-top-help-box__li
               車体取引ガイド
-            .li
+            .footer-top-help-box__li
               メルカリあんしん・あんぜん宣言
-            .li
+            .footer-top-help-box__li
               偽ブランド品撲滅への取り組み
-            .li
+            .footer-top-help-box__li
               メルカリボックス
       .footer-top-privacys
         .footer-top-privacy
           プライバシーと利用規約
-          .ul
-            .li
+          .footer-top-privacy-box
+            .footer-top-privacy-box__li
               プライバシーポリシー
-            .li
+            .footer-top-privacy-box__li
               メルカリ利用規約
-            .li
+            .footer-top-privacy-box__li
               あんしんスマホサポート制度に関する利用規約
-            .li
+            .footer-top-privacy-box__li
               コンプライアンスポリシー
         .footer-top-private
-          .ul
-            .li
+          .footer-top-private-box
+            .footer-top-private-box__li
               個人データの安全管理に関わる基本方針
-            .li
+            .footer-top-private-box__li
               特定商取引に関する表記
-            .li
+            .footer-top-private-box__li
               資金決済法に基づく表示
-            .li
+            .footer-top-private-box__li
               法令遵守と犯罪の抑止のために
-            .li
+            .footer-top-private-box__li
               返品・返金のポリシー
       .footer-top-country
         国
-        .ul
-          .li
-            日本
-          .li
+        .footer-top-country__li
+          日本
+          .footer-top-country__li
             United States
     .footer-under
       =image_tag("blacklogo.png",width:"150" )
