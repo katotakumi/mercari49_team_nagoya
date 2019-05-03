@@ -68,6 +68,7 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'active_hash'
 
 # ユーザー関連
 gem 'devise'
