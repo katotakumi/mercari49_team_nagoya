@@ -25,10 +25,10 @@
   height: 2800px;
   padding:0px 350px 0px 350px;
   background-color: #EEEEEE;
-  .sailmain{
+  .sellmain{
     width:100%;
     background-color: white;
-    .sellmain-top{
+    &-top{
       box-sizing: border-box;
       width: 100%;
       height: 90px;
@@ -39,83 +39,114 @@
       padding: 32px 16px;
       border-bottom: dashed 1.2px #dcdcdc;
     }
-    .sellmain-under{
+    &-under{
       box-sizing: border-box;
       width: 100%;
       height: 1500px;
       background-color: white;
-    }
-    .sellmain-under-upload-box{
+      &-upload-box{
+        box-sizing: border-box;
+        width: 100%;
+        height:30%;
+        padding:40px;
+        border-bottom: dashed 1.2px #dcdcdc;
+        &-name{
+          box-sizing: border-box;
+          width: 100%;
+          height:10%;
+          &__title{
+            box-sizing: border-box;
+            width: 12%;
+            height:100%;
+            font-weight: bold; 
+            float:left;
+            text-align: left;
+          }
+          &__red{
+            height:60%;
+            width:5%;
+            background-color: red;
+            border-radius: 3px;
+            color: white;
+            font-size:12px;
+            font-weight: bold; 
+            float:left;
+          }
+        }
+        &-text{
+          box-sizing: border-box;
+          width: 100%;
+          height:10%;
+          font-size:12px;
+          text-align: left;
+        }
+        &-image{
+          box-sizing: border-box;
+          width: 100%;
+          height:50%;
+          background-color: #EEEEEE;
+          border: dashed 1.2px #dcdcdc;
+          &__text{
+            box-sizing: border-box;
+            width: 100%;
+            height:100%;
+            padding:60px;
+            text-align:center;
+            font-size:14px;
+          }
+        }
+      }
+      &-content-box{
       box-sizing: border-box;
       width: 100%;
       height:30%;
       padding:40px;
       border-bottom: dashed 1.2px #dcdcdc;
-      .sellmain-under-upload-box-name{
-        box-sizing: border-box;
-        width: 100%;
-        height:10%;
-        .sellmain-under-upload-box-name__title{
+        &-name{
           box-sizing: border-box;
-          width: 12%;
-          height:100%;
-          font-weight: bold; 
-          float:left;
-          text-align: left;
-        }
-        .sellmain-under-upload-box-name__red{
-        height:60%;
-        width:5%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
+          width: 100%;
+          height:10%;
+          &__title{
+            box-sizing: border-box;
+            width: 11%;
+            height:100%;
+            font-weight: bold; 
+            float:left;
+            text-align: left;
+          }
+          &__red{
+            height:60%;
+            width:5%;
+            background-color: red;
+            border-radius: 3px;
+            color: white;
+            font-size:12px;
+            font-weight: bold; 
+            float:left;
+          }
         }
       }
-      .sellmain-under-upload-box-text{
+      &-content-name{
         box-sizing: border-box;
         width: 100%;
-        height:10%;
-        font-size:12px;
-        text-align: left;
-      }
-    }
-    .sellmain-under-upload-box-image{
-      box-sizing: border-box;
-      width: 100%;
-      height:50%;
-      background-color: #EEEEEE;
-      border: dashed 1.2px #dcdcdc;
-      .sellmain-under-upload-box-image__text{
-        box-sizing: border-box;
-        width: 100%;
-        height:100%;
-        padding:60px;
+        height:15%;
+        border: solid 1.2px #dcdcdc;
         text-align:center;
         font-size:14px;
       }
-    }
-    .sellmain-under-content-box{
-      box-sizing: border-box;
-      width: 100%;
-      height:30%;
-      padding:40px;
-      border-bottom: dashed 1.2px #dcdcdc;
-      .sellmain-under-content-box-name{
+      &-content-text{
         box-sizing: border-box;
         width: 100%;
         height:10%;
-        .sellmain-under-content-box-name__title{
+        &__title{
           box-sizing: border-box;
-          width: 11%;
+          width: 15%;
           height:100%;
           font-weight: bold; 
           float:left;
           text-align: left;
         }
-        .sellmain-under-content-box-name__red{
+        &__red{
           height:60%;
           width:5%;
           background-color: red;
@@ -125,78 +156,46 @@
           font-weight: bold; 
           float:left;
         }
+        &-title{
+          box-sizing: border-box;
+          width: 100%;
+          height:50%;
+          border: solid 1.2px #dcdcdc;
+          text-align:center;
+          font-size:14px;
+        }
       }
-      .sellmain-under-content-name{
+      &-sub-box{
         box-sizing: border-box;
         width: 100%;
-        height:15%;
-        border: solid 1.2px #dcdcdc;
-        text-align:center;
-        font-size:14px;
-      }
-      .sellmain-under-content-text{
-        box-sizing: border-box;
-        width: 100%;
-        height:10%;
-      }
-      .sellmain-under-content-text__title{
-        box-sizing: border-box;
-          width: 15%;
-          height:100%;
-          font-weight: bold; 
-          float:left;
-          text-align: left;
-      }
-      .sellmain-under-content-text__red{
-        height:60%;
-        width:5%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
-      }
-    }
-    .sellmain-under-content-text-title{
-      box-sizing: border-box;
-      width: 100%;
-      height:50%;
-      border: solid 1.2px #dcdcdc;
-      text-align:center;
-      font-size:14px;
-    }
-    .sellmain-under-sub-box{
-      box-sizing: border-box;
-      width: 100%;
-      height:30%;
-      padding:40px;
-      text-align: left;
-      border-bottom: dashed 1.2px #dcdcdc;
-      .sellmain-under-sub-box-name{
-        box-sizing: border-box;
-        width: 70%;
-        height:50%;
-        float:right;
-      }
-      .sellmain-under-sub-box-name__title{
-        box-sizing: border-box;
-        width: 20%;
-        height:10%;
-        font-weight: bold; 
-        float:left;
+        height:30%;
+        padding:40px;
         text-align: left;
-      }
-      .sellmain-under-sub-box-name__red{
-        height:13%;
-        width:10%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
-      }
+        border-bottom: dashed 1.2px #dcdcdc;
+        &-name{
+          box-sizing: border-box;
+          width: 70%;
+          height:50%;
+          float:right;
+          &__title{
+            box-sizing: border-box;
+            width: 20%;
+            height:10%;
+            font-weight: bold; 
+            float:left;
+            text-align: left;
+          }
+          &__red{
+            height:13%;
+            width:10%;
+            background-color: red;
+            border-radius: 3px;
+            color: white;
+            font-size:12px;
+            font-weight: bold; 
+            float:left;
+          }
+        }
       .selectWrap{
         width: 100%;
         position: relative;
@@ -238,25 +237,24 @@
         width: 70%;
         height:50%;
         float:right;
-      }
-      .sellmain-under-sub-box-text__title{
-        box-sizing: border-box;
-        width: 20%;
-        height:10%;
-        font-weight: bold; 
-        float:left;
-        text-align: left;
-      }
-      .sellmain-under-sub-box-text__red{
-        height:13%;
-        width:10%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
-      }
+        &__title{
+          box-sizing: border-box;
+          width: 20%;
+          height:10%;
+          font-weight: bold; 
+          float:left;
+          text-align: left;
+        }
+        &__red{
+          height:13%;
+          width:10%;
+          background-color: red;
+          border-radius: 3px;
+          color: white;
+          font-size:12px;
+          font-weight: bold; 
+          float:left;
+        }
       .selectWrap{
         width: 100%;
         position: relative;
@@ -294,6 +292,7 @@
         display: none;
       }
     } 
+  }
     .sellmain-under-delivery-box{
       box-sizing: border-box;
       width: 100%;
@@ -301,90 +300,29 @@
       padding:40px;
       text-align: left;
       border-bottom: dashed 1.2px #dcdcdc;
-      .sellmain-under-delivery-box-name{
+      &-name{
         box-sizing: border-box;
         width: 70%;
         height:33%;
         float:right;
-      }
-      .sellmain-under-delivery-box-name__title{
-        box-sizing: border-box;
-        width: 20%;
-        height:10%;
-        font-weight: bold; 
-        float:left;
-        text-align: left;
-      }
-      .sellmain-under-delivery-box-name__red{
-        height:13%;
-        width:10%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
-      }
-      .selectWrap{
-        width: 100%;
-        position: relative;
-        display: inline-block;
-      }
-      .selectWrap::after {
-        content: '';
-        width: 6px;
-        height: 6px;
-        border: 0px;
-        border-bottom: solid 2px #b4b3b3;
-        border-right: solid 2px #b4b3b3;
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        margin-top: -4px;
-      }
-      .select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 100%;
-        height: 40px;
-        background: transparent;
-        position: relative;
-        z-index: 1;
-        padding: 0 40px 0 10px;
-        border: 1px solid #b4b3b3;
-        border-radius: 2px;
-      }
-      select::-ms-expand {
-        display: none;
-      }
-      .sellmain-under-delivery-box-text{
-        box-sizing: border-box;
-        width: 70%;
-        height:33%;
-        float:right;
-      }
-      .sellmain-under-delivery-box-text__title{
-        box-sizing: border-box;
-        width: 20%;
-        height:10%;
-        font-weight: bold; 
-        float:left;
-        text-align: left;
-      }
-      .sellmain-under-delivery-box-text__red{
-        height:13%;
-        width:10%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
-      }
+        &__title{
+          box-sizing: border-box;
+          width: 20%;
+          height:10%;
+          font-weight: bold; 
+          float:left;
+          text-align: left;
+        }
+        &__red{
+          height:13%;
+          width:10%;
+          background-color: red;
+          border-radius: 3px;
+          color: white;
+          font-size:12px;
+          font-weight: bold; 
+          float:left;
+        }
       .selectWrap{
         width: 100%;
         position: relative;
@@ -422,6 +360,67 @@
         display: none;
       }
     }
+      .sellmain-under-delivery-box-text{
+        box-sizing: border-box;
+        width: 70%;
+        height:33%;
+        float:right;
+        &__title{
+          box-sizing: border-box;
+          width: 20%;
+          height:10%;
+          font-weight: bold; 
+          float:left;
+          text-align: left;
+        }
+        &__red{
+          height:13%;
+          width:10%;
+          background-color: red;
+          border-radius: 3px;
+          color: white;
+          font-size:12px;
+          font-weight: bold; 
+          float:left;
+        }
+      .selectWrap{
+        width: 100%;
+        position: relative;
+        display: inline-block;
+      }
+      .selectWrap::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: 0px;
+        border-bottom: solid 2px #b4b3b3;
+        border-right: solid 2px #b4b3b3;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -4px;
+      }
+      .select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 40px;
+        background: transparent;
+        position: relative;
+        z-index: 1;
+        padding: 0 40px 0 10px;
+        border: 1px solid #b4b3b3;
+        border-radius: 2px;
+      }
+      select::-ms-expand {
+        display: none;
+      }
+    }
+  }
     .sellmain-under-sale-box{
       box-sizing: border-box;
       width: 100%;
@@ -429,45 +428,42 @@
       padding:40px;
       text-align: left;
       border-bottom: dashed 1.2px #dcdcdc;
-      .sellmain-under-sale-box-name{
+      &-name{
         box-sizing: border-box;
         width: 70%;
         height:20%;
         float:right;
         padding: 0 0 24px;
         border-bottom:solid  1.2px #d3d3d3;
-      }
-      .sellmain-under-sale-box-name-label{
-        box-sizing: border-box;
-        height:50%;
-        width:50%;
-
-      }
-      .sellmain-under-sale-box-name-label__title{
-        box-sizing: border-box;
-        width: 20%;
-        height:50%;
-        font-weight: bold; 
-        float:left;
-        text-align: left;
-      }
-      
-      .sellmain-under-sale-box-name-label__red{
-        height:50%;
-        width:10%;
-        background-color: red;
-        border-radius: 3px;
-        color: white;
-        font-size:12px;
-        font-weight: bold; 
-        float:left;
-      }
-      .sallmain-under-sale-box-name-input {
-        box-sizing: border-box;
-        height:50%;
-        width:50%;
-        float:right;
-      }
+        &-label{
+          box-sizing: border-box;
+          height:50%;
+          width:50%;
+          &__title{
+            box-sizing: border-box;
+            width: 20%;
+            height:50%;
+            font-weight: bold; 
+            float:left;
+            text-align: left;
+          }
+          &__red{
+            height:50%;
+            width:10%;
+            background-color: red;
+            border-radius: 3px;
+            color: white;
+            font-size:12px;
+            font-weight: bold; 
+            float:left;
+          }
+        }
+        &-input {
+          box-sizing: border-box;
+          height:50%;
+          width:50%;
+          float:right;
+        }  
       .sallmain-under-sale-box-input input[type='text'] {
         font: 15px/24px sans-serif;
         box-sizing: border-box;
@@ -483,27 +479,25 @@
         border: 2px solid #b3d4fc;
         outline: none;
       }
-      
-      .sellmain-under-sale-box-text{
-        box-sizing: border-box;
-        width: 70%;
-        height:20%;
-        float:right;
-        padding:25px 0px 25px 0px;
-        border-bottom:solid  1.2px #d3d3d3;
-        .sallmain-under-sale-box-text__left{
+    }      
+    .sellmain-under-sale-box-text{
+      box-sizing: border-box;
+      width: 70%;
+      height:20%;
+      float:right;
+      padding:25px 0px 25px 0px;
+      border-bottom:solid  1.2px #d3d3d3;
+      &__left{
+        box-sizing:border-box;
+        width:50%;
+        text-align: right;
+        }
+        &__right{
           box-sizing:border-box;
           width:50%;
           text-align: right;
         }
-        .sallmain-under-sale-box-text__right{
-          box-sizing:border-box;
-          width:50%;
-          text-align: right;
-        }
-      }
-      
-    }
+      }   
     .sellmain-under-sale-box-gain{
       box-sizing: border-box;
       width: 70%;
@@ -511,22 +505,22 @@
       float:right;
       padding:25px 0px 25px 0px;
       border-bottom:solid  1.2px #d3d3d3;
-    }
-    .sellmain-under-sale-box-gain__left{
-      box-sizing: border-box;
-      width: 20%;
-      height:10%;
-      font-weight: bold; 
-      float:left;
-      text-align: left;
-    }
-    .sellmain-under-sale-box-gain__right{
-      box-sizing: border-box;
-      width: 20%;
-      height:10%;
-      font-weight: bold; 
-      float:right;
-      text-align: right;
+      &__left{
+        box-sizing: border-box;
+        width: 20%;
+        height:10%;
+        font-weight: bold; 
+        float:left;
+        text-align: left;
+      }
+      &__right{
+        box-sizing: border-box;
+        width: 20%;
+        height:10%;
+        font-weight: bold; 
+        float:right;
+        text-align: right;
+      }
     }
     .sellmain-under-button-box{
       box-sizing: border-box;
@@ -534,12 +528,12 @@
       height:30%;
       padding:40px;
       text-align: left;
-      .sellmain-under-button-box-text{  
+      &-text{  
         box-sizing: border-box;
         width: 100%;
         height:30%;
         font-size:12px;
-      }         
+      }
       .sellmain-under-button-red{
         box-sizing: border-box;
         width: 100%;
@@ -562,6 +556,8 @@
     }
   }
 }
+
+
 .sellfooter{
   box-sizing: border-box;
   width: 100vw;
@@ -569,10 +565,5 @@
   text-align:center;
   background-color: #EEEEEE;
 }
-  .sellfooter-text{
-
-  }
-  .sellfooter-logo{
-    
-  }
-  
+}
+}
