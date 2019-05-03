@@ -497,7 +497,8 @@
           width:50%;
           text-align: right;
         }
-      }   
+      }
+    }   
     .sellmain-under-sale-box-gain{
       box-sizing: border-box;
       width: 70%;
@@ -534,28 +535,29 @@
         height:30%;
         font-size:12px;
       }
-      .sellmain-under-button-red{
-        box-sizing: border-box;
-        width: 100%;
-        height:15%;
-        background-color: red;
-        padding:10px 20px;
-        color: white;
-        text-align: center;
-      }  
-      .sellmain-under-button-gray{
-        box-sizing: border-box;
-        width: 50%;
-        height:15%;
-        background-color: gray;
-        margin: 20px 150px;
-        padding:15px 20px;
-        color: white;
-        text-align: center;
-      }
+    }
+    .sellmain-under-button-red{
+      box-sizing: border-box;
+      width: 100%;
+      height:15%;
+      background-color: red;
+      padding:10px 20px;
+      color: white;
+      text-align: center;
+    }  
+    .sellmain-under-button-gray{
+      box-sizing: border-box;
+      width: 50%;
+      height:15%;
+      background-color: gray;
+      margin: 20px 150px;
+      padding:15px 20px;
+      color: white;
+      text-align: center;
     }
   }
 }
+
 
 
 .sellfooter{
@@ -566,4 +568,5 @@
   background-color: #EEEEEE;
 }
 }
-}
+
+
