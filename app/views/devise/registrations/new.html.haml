@@ -1,28 +1,6 @@
--# %h2 Sign up
--# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
--#   = render "devise/shared/error_messages", resource: resource
--#   .field
--#     = f.label :email
--#     %br/
--#     = f.email_field :email, autofocus: true, autocomplete: "email"
--#   .field
--#     = f.label :password
--#     - if @minimum_password_length
--#       %em
--#         (#{@minimum_password_length} characters minimum)
--#     %br/
--#     = f.password_field :password, autocomplete: "new-password"
--#   .field
--#     = f.label :password_confirmation
--#     %br/
--#     = f.password_field :password_confirmation, autocomplete: "new-password"
--#   .actions
--#     = f.submit "Sign up"
--# = render "devise/shared/links"
 .header-login
   .header-login__mercari
     = image_tag("users_logo.png", width: 200)
--# %h2 Sign up
 .sign_up-login
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
@@ -161,7 +139,6 @@
         .sign-up__panel__group
           .sign-up__panel__group__button
             = f.submit "登録", class: "btn"
-  -# = render "devise/shared/links"
 .footer-login
   .footer-login__clearfix
     .footer-login__clearfix__option プライバシーポリシー

@@ -27,37 +27,6 @@
 - has_many :comments
 - has_many :exhibitions,through: :user_exhibitions
 - has_many :user_exhibitions
-<!-- - belongs_to :address
-- belongs_to :pay -->
-
-
-<!-- ## addressテーブル -->
-
-<!-- |Column|Type|Options|
-|------|----|-------|
-|user_id|references|foreign_key: true|
-|prefecture|integer|null: false|
-|municipalities|string|null: false|
-|address|string|null: false|
-|building|string|null: false|
-|phone_number|string|null: false| -->
-
-<!-- ### Association
-- belongs_to :user -->
-
-<!-- ## paysテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|foreign_key: true| -->
-<!-- |cald_number|integer|null: false|
-|year|integer|null: false|
-|month|integer|null: false|
-|security_number|integer|null: false| -->
-
-<!-- ### Association
-- belongs_to :user -->
-
 
 ## commentsテーブル
 
