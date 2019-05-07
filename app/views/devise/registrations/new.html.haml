@@ -1,21 +1,172 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+-# %h2 Sign up
+-# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+-#   = render "devise/shared/error_messages", resource: resource
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true, autocomplete: "email"
+-#   .field
+-#     = f.label :password
+-#     - if @minimum_password_length
+-#       %em
+-#         (#{@minimum_password_length} characters minimum)
+-#     %br/
+-#     = f.password_field :password, autocomplete: "new-password"
+-#   .field
+-#     = f.label :password_confirmation
+-#     %br/
+-#     = f.password_field :password_confirmation, autocomplete: "new-password"
+-#   .actions
+-#     = f.submit "Sign up"
+-# = render "devise/shared/links"
+.header-login
+  .header-login__mercari
+    = image_tag("users_logo.png", width: 200)
+-# %h2 Sign up
+.sign_up-login
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .sign-up
+      .sign-up__panel
+        .sign-up__panel__title 会員情報入力
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :ニックネーム
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "例）メルカリ太郎"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :メールアドレス
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :パスワード
+              - if @minimum_password_length
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :パスワード（確認）
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "6文字以上"
+          .sign-up__panel__group__form
+            .sign-up__panel__group__form__identification 本人確認
+            .sign-up__panel__group__form__detail 安心・安全にご利用いただくために、お客さまの<br>本人情報の登録にご協力ください。他のお客さま<br>に公開されることはありません。
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :姓（全角）
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :family_name, autofocus: true, autocomplete: "family_name", placeholder: "例）山田"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :名（全角）
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "例）彩"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :姓（カナ）
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :j_family_name, autofocus: true, autocomplete: "j_family_name", placeholder: "例）ヤマダ"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :名（カナ）
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :j_last_name, autofocus: true, autocomplete: "j_last_name", placeholder: "例）アヤ"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :生年月日
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__select
+            = f.date_select :birthday, autofocus: true, autocomplete: "birthday", class: "sign-up__panel__group__select__form-control", start_year: 1900, end_year: (Time.now.year), include_blank: true, use_month_numbers: true,date_separator: '/'
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :都道府県
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__select
+            = f.collection_select :prefecture, Prefecture.all, :id, :name,autofocus: true, autocomplete: "prefecture", class: "sign-up__panel__group__select__form-control"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :市区町村
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :municipalities, autofocus: true, autocomplete: "municipalities", placeholder: "例）横浜市緑区"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :番地
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :address, autofocus: true, autocomplete: "address", placeholder: "例）青山1-1-1"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :建物名
+            .sign-up__panel__group__label__optinonal 任意
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :building, autofocus: true, autocomplete: "building", placeholder: "例）柳ビル 103"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :電話番号
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "例）09012345678"
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :カード番号
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :card_number, autofocus: true, autocomplete: "card_number", placeholder: "半角数字のみ",maxlength: 16
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :有効期限
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__select
+            = f.date_select :year, autofocus: true, autocomplete: "year", class: "sign-up__panel__group__select__form-control", start_year:(Time.now.year), discard_day: true, include_blank: true, use_month_numbers: true,date_separator: '/'
+        .sign-up__panel__group
+          .sign-up__panel__group__credit
+          = image_tag("creditcard.png", width: 400)
+        .sign-up__panel__group
+          .sign-up__panel__group__label
+            = f.label :セキュリティコード
+            .sign-up__panel__group__label__require 必須
+            %br/
+          .sign-up__panel__group__form
+            = f.text_field :security_number, autofocus: true, autocomplete: "security_number", placeholder: "カード背面4桁もしくは3桁の番号",maxlength: 4
+        .sign-up__panel__group
+          .sign-up__panel__group__form
+            .sign-up__panel__group__form__note ※ 本人情報は正しく入力してください。会員登録<br>後、修正するにはお時間を頂く場合があります。
+        .sign-up__panel__group
+          .sign-up__panel__group__button
+            = f.submit "登録", class: "btn"
+  -# = render "devise/shared/links"
+.footer-login
+  .footer-login__clearfix
+    .footer-login__clearfix__option プライバシーポリシー
+    .footer-login__clearfix__option メルカリ利用規約
+    .footer-login__clearfix__option 特定商取引に関する表記
+  .footer-login__logo
+    = image_tag("footer_logo.png", width: 100)
+  .footer-login__year © 2019 Mercari
