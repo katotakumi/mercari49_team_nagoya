@@ -72,3 +72,6 @@ gem 'active_hash'
 
 # ユーザー関連
 gem 'devise'
+
+#デバック用
+gem "pry-rails"

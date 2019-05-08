@@ -134,6 +134,20 @@
         text-align:center;
         font-size:14px;
       }
+      .sellmain-under-content-name input {
+        font: 15px/24px sans-serif;
+        box-sizing: border-box;
+        width: 100%;
+        height:100%;
+        padding: 0.3em;
+      
+        
+        
+      }
+      .input input[type='text']:focus {
+        border: 2px solid #b3d4fc;
+        outline: none;
+      }
       &-content-text{
         box-sizing: border-box;
         width: 100%;
@@ -163,6 +177,13 @@
           border: solid 1.2px #dcdcdc;
           text-align:center;
           font-size:14px;
+        }
+        .sellmain-under-content-text-title{
+          font: 15px/24px sans-serif;
+          box-sizing: border-box;
+          width: 100%;
+          height:100%;
+          padding: 0.3em;
         }
       }
       &-sub-box{
@@ -544,8 +565,19 @@
       padding:10px 20px;
       color: white;
       text-align: center;
+    }
+    .sellmain-under-button-red input{
+      box-sizing: border-box;
+      width: 100%;
+      height:100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+      border:none;
+
     }  
     .sellmain-under-button-gray{
+
       box-sizing: border-box;
       width: 50%;
       height:15%;
@@ -555,6 +587,17 @@
       color: white;
       text-align: center;
     }
+    .sellmain-under-button-gray input{
+      outline: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height:100%;
+      background-color: gray;
+      border:none;
+      color: white;
+      
+    }
+
   }
 }
 
