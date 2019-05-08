@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190503091348) do
-
-  create_table "exhibitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id"
-    t.string   "title"
-    t.text     "text",            limit: 65535
-    t.string   "image"
-    t.string   "category"
-    t.string   "state"
-    t.string   "shipping_charge"
-    t.string   "shipping_area"
-    t.string   "shipping_data"
-    t.string   "price"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.index ["user_id"], name: "index_exhibitions_on_user_id", using: :btree
-  end
+ActiveRecord::Schema.define(version: 20190506013318) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nickname",               default: "", null: false
@@ -36,14 +20,21 @@ ActiveRecord::Schema.define(version: 20190503091348) do
     t.string   "last_name",              default: "", null: false
     t.string   "j_family_name",          default: "", null: false
     t.string   "j_last_name",            default: "", null: false
-    t.integer  "birthiday_year",         default: 0,  null: false
-    t.integer  "birthday_month",         default: 0,  null: false
-    t.integer  "birthday_day",           default: 0,  null: false
+    t.datetime "birthday",                            null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "prefecture"
+    t.string   "municipalities"
+    t.string   "address"
+    t.string   "building"
+    t.string   "phone_number"
+    t.integer  "card_number"
+    t.string   "year"
+    t.string   "month"
+    t.string   "security_number"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

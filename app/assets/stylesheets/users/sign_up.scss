@@ -1,0 +1,105 @@
+.sign_up-login{
+  height: 2300px;
+  background-color: #f5f5f5;
+  .sign-up{
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 2200px;
+    &__panel{
+      height: 800px;
+      &__title{
+        text-align: center;
+        padding: 32px 16px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      &__group{
+        padding-left: 200px;
+        padding-bottom: 30px;
+        &__label{
+          font-weight: 550;
+          display: flex;
+          text-align: center;
+          &__require{
+            background: #ea352d;
+            color: #fff;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-size: 12px;
+            width: 25px;
+          }
+          &__optinonal{
+            background: #BBBBBB;
+            color: #fff;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-size: 12px;
+            width: 25px;
+          }
+        }
+        &__form{
+          &__identification{
+            font-size: 16px;
+            font-weight: 550;
+          }
+          &__detail{
+            font-size: 12px;
+            margin: 8px 0 0;
+            padding: 0;
+          }
+          &__note{
+            font-size: 12px;
+            margin: 8px 0 0;
+            padding: 0;
+            color: #666666;
+          }
+          margin: 8px 0 0;
+          #user_nickname
+          ,#user_email
+          ,#user_password
+          ,#user_password_confirmation
+          ,#user_family_name
+          ,#user_last_name
+          ,#user_j_family_name
+          ,#user_j_last_name
+          ,#user_municipalities
+          ,#user_address
+          ,#user_building
+          ,#user_phone_number
+          ,#user_card_number
+          ,#user_security_number{
+            width: 300px;
+            height: 30px;
+          }
+          &__select{
+            margin: 8px 0 0;
+            #user_prefecture{
+            width: 100%;
+            height: 40px;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+            padding: 0 40px 0 10px;
+            border: 1px solid #b4b3b3;
+            border-radius: 2px;
+            }
+          }
+        }
+        &__button{
+          .btn{
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            margin: 30px 0 0;
+            text-align: center;
+            width: 350px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
