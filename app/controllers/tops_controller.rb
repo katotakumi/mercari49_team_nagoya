@@ -4,12 +4,19 @@ class TopsController < ApplicationController
   end
 
   def new
-    @exhibitions = Exhibition.new
+    @exhibition = Exhibition.new
   end
 
   
   def create
-    Exhibition.create!(exhibition_params)
+    @exhibition = Exhibition.new(exhibition_params)
+    if @exhibition.save  
+      redirect_to controller: :tops, action: :create, notice: "商品を投稿しました"
+    else 
+      flash.now[:error] = 'メッセージの送信に失敗しました'
+      render :index
+      render :new
+    end
   end
   
   
