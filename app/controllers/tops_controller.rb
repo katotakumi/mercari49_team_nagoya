@@ -4,7 +4,7 @@ class TopsController < ApplicationController
   end
 
   def new
-    @exhibition = Exhibition.new
+    @exhibitions = Exhibition.new
   end
 
   
@@ -16,7 +16,7 @@ class TopsController < ApplicationController
 
 
   def show 
-    @ehibition = Exhibition.find(params[:id])   
+    @exhibition = Exhibition.find(params[:id])   
   end
   
   def destroy 

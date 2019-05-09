@@ -57,13 +57,13 @@
           &__title{
             box-sizing: border-box;
             width: 12%;
-            height:100%;
+            height:10%;
             font-weight: bold; 
             float:left;
             text-align: left;
           }
           &__red{
-            height:60%;
+            height:1%;
             width:5%;
             background-color: red;
             border-radius: 3px;
@@ -93,6 +93,7 @@
             padding:60px;
             text-align:center;
             font-size:14px;
+            
           }
         }
       }
@@ -178,11 +179,11 @@
           text-align:center;
           font-size:14px;
         }
-        .sellmain-under-content-text-title{
+        .sellmain-under-content-text-title input{
           font: 15px/24px sans-serif;
           box-sizing: border-box;
           width: 100%;
-          height:100%;
+          height:200%;
           padding: 0.3em;
         }
       }
@@ -328,7 +329,7 @@
         float:right;
         &__title{
           box-sizing: border-box;
-          width: 20%;
+          width: 25%;
           height:10%;
           font-weight: bold; 
           float:left;
@@ -336,7 +337,7 @@
         }
         &__red{
           height:13%;
-          width:10%;
+          width:8%;
           background-color: red;
           border-radius: 3px;
           color: white;
@@ -388,7 +389,7 @@
         float:right;
         &__title{
           box-sizing: border-box;
-          width: 20%;
+          width: 25%;
           height:10%;
           font-weight: bold; 
           float:left;
@@ -396,7 +397,7 @@
         }
         &__red{
           height:13%;
-          width:10%;
+          width:8%;
           background-color: red;
           border-radius: 3px;
           color: white;
@@ -462,7 +463,7 @@
           width:50%;
           &__title{
             box-sizing: border-box;
-            width: 20%;
+            width: 25%;
             height:50%;
             font-weight: bold; 
             float:left;
@@ -470,7 +471,7 @@
           }
           &__red{
             height:50%;
-            width:10%;
+            width:8%;
             background-color: red;
             border-radius: 3px;
             color: white;
