@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :before_login, only:[:show]
+    before_action :before_login, only: :show
 
   def index
 
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def update
 
   end
-  
+
   private
   def before_login
     redirect_to new_user_session_path unless user_signed_in?
