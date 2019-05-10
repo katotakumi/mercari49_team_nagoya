@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+      models:
+        user: "ユーザー"
+      attributes:
+        user:
+          nickname: ニックネーム
+          email: メールアドレス
+          password: パスワード
+          password_confirmation: パスワード(再入力)
+          family_name: 姓
+          last_name: 名
+          j_family_name: 姓カナ
+          j_last_name: 名カナ
+          birthday: 生年月日
+          prefecture: 都道府県
+          municipalities: 市区町村
+          address: 番地
+          phone_number: 電話番号
+          card_number: カード番号
+          expiration_date: 有効期限
+          security_number: セキュリティコード

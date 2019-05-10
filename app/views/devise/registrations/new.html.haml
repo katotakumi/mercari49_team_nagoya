@@ -1,6 +1,4 @@
-.header-login
-  .header-login__mercari
-    = image_tag("users_logo.png", width: 200)
+= render "devise/shared/header-login"
 .sign_up-login
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
@@ -108,21 +106,21 @@
             .sign-up__panel__group__label__require 必須
             %br/
           .sign-up__panel__group__form
-            = f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "例）09012345678"
+            = f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "例）09012345678", maxlength: 11
         .sign-up__panel__group
           .sign-up__panel__group__label
             = f.label :カード番号
             .sign-up__panel__group__label__require 必須
             %br/
           .sign-up__panel__group__form
-            = f.text_field :card_number, autofocus: true, autocomplete: "card_number", placeholder: "半角数字のみ",maxlength: 16
+            = f.text_field :card_number, autofocus: true, autocomplete: "card_number", placeholder: "半角数字のみ", maxlength: 16
         .sign-up__panel__group
           .sign-up__panel__group__label
             = f.label :有効期限
             .sign-up__panel__group__label__require 必須
             %br/
           .sign-up__panel__group__select
-            = f.date_select :year, autofocus: true, autocomplete: "year", class: "sign-up__panel__group__select__form-control", start_year:(Time.now.year), discard_day: true, include_blank: true, use_month_numbers: true,date_separator: '/'
+            = f.date_select :expiration_date, autofocus: true, autocomplete: "expiration_date", class: "sign-up__panel__group__select__form-control", start_year:(Time.now.year), discard_day: true, include_blank: true, use_month_numbers: true,date_separator: '/'
         .sign-up__panel__group
           .sign-up__panel__group__credit
           = image_tag("creditcard.png", width: 400)
@@ -132,18 +130,11 @@
             .sign-up__panel__group__label__require 必須
             %br/
           .sign-up__panel__group__form
-            = f.text_field :security_number, autofocus: true, autocomplete: "security_number", placeholder: "カード背面4桁もしくは3桁の番号",maxlength: 4
+            = f.text_field :security_number, autofocus: true, autocomplete: "security_number", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: 4
         .sign-up__panel__group
           .sign-up__panel__group__form
             .sign-up__panel__group__form__note ※ 本人情報は正しく入力してください。会員登録<br>後、修正するにはお時間を頂く場合があります。
         .sign-up__panel__group
           .sign-up__panel__group__button
             = f.submit "登録", class: "btn"
-.footer-login
-  .footer-login__clearfix
-    .footer-login__clearfix__option プライバシーポリシー
-    .footer-login__clearfix__option メルカリ利用規約
-    .footer-login__clearfix__option 特定商取引に関する表記
-  .footer-login__logo
-    = image_tag("footer_logo.png", width: 100)
-  .footer-login__year © 2019 Mercari
+= render "devise/shared/footer-login"

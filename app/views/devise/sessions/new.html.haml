@@ -1,6 +1,4 @@
-.header-login
-  .header-login__mercari
-    = image_tag("users_logo.png", width: 200)
+= render "devise/shared/header-login"
 .main-login
   .login
     .login__panel
@@ -22,11 +20,4 @@
         .login__form-inner__password
           - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
             = link_to "パスワードをお忘れの方", new_password_path(resource_name)
-.footer-login
-  .footer-login__clearfix
-    .footer-login__clearfix__option プライバシーポリシー
-    .footer-login__clearfix__option メルカリ利用規約
-    .footer-login__clearfix__option 特定商取引に関する表記
-  .footer-login__logo
-    = image_tag("footer_logo.png", width: 100)
-  .footer-login__year © 2019 Mercari
+= render "devise/shared/footer-login"

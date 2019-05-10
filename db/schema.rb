@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190510040143) do
+ActiveRecord::Schema.define(version: 20190510150508) do
 
   create_table "exhibitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20190510040143) do
     t.string   "price"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
-    t.integer  "buyer_id"
     t.index ["user_id"], name: "index_exhibitions_on_user_id", using: :btree
   end
 
@@ -48,9 +47,8 @@ ActiveRecord::Schema.define(version: 20190510040143) do
     t.string   "address"
     t.string   "building"
     t.string   "phone_number"
-    t.integer  "card_number"
-    t.string   "year"
-    t.string   "month"
+    t.bigint   "card_number"
+    t.date     "expiration_date"
     t.string   "security_number"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

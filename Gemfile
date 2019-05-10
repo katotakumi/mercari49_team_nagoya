@@ -69,9 +69,13 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'active_hash'
+gem 'rails-i18n'
 
 # ユーザー関連
 gem 'devise'
 
 #デバック用
 gem "pry-rails"
+
+# マイグレーション
+gem 'squasher'
