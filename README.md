@@ -18,8 +18,7 @@
 |building|string|null: false|
 |phone_number|string|null: false|
 |card_number|integer|null: false|
-|year|integer|null: false|
-|month|integer|null: false|
+|expiration_date|date|null: false|
 |security_number|integer|null: false|
 
 

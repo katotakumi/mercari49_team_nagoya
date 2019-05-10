@@ -1,0 +1,22 @@
+.footer-login{
+  height: 200px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  &__clearfix{
+    display: flex;
+    justify-content: center;
+    &__option{
+      font-size: 11px;
+      padding-top: 40px;
+      padding-left: 20px;
+    }
+  }
+  &__logo{
+    padding-top: 30px;
+    text-align: center;
+  }
+  &__year{
+    font-size: 10px;
+    text-align: center;
+  }
+}
