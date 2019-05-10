@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
     before_action :before_login, only: :show
+    before_action :authenticate_user!, except: :new
 
   def index
-
+    
   end
 
   def create

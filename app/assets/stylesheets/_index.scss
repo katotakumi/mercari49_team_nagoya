@@ -87,7 +87,7 @@
       float: left;
       &-login{
         height:40px;
-        width: 100px;
+        width: 200px;
         float: left;
         &__button {
           box-sizing: border-box;
@@ -100,12 +100,17 @@
           color: white;
           float:left;
           font-size: 13px;
+          #login-btn{
+            text-decoration: none;
+            color: white;
+          }
         }
       }
       &-new{
         height:30px;
         width: 100px;
-        float: left;
+        float: right;
+        padding-left: 10px;
         &__button{
           box-sizing: border-box;
           border-style:solid;
@@ -119,6 +124,31 @@
           color: #0099e8;
           font-size: 13px;
           float: left;
+          #new-btn{
+            text-decoration: none;
+            color: #0099e8;
+          }
+        }
+      }
+      &-sign_out{
+        height:40px;
+        width: 200px;
+        float: left;
+        &__button {
+          box-sizing: border-box;
+          height: 35px;
+          width: 100px;
+          border-radius: 5px;
+          background-color:red;
+          padding: 8px;
+          text-align: center;
+          color: white;
+          float:left;
+          font-size: 13px;
+          #sign_out-btn{
+            text-decoration: none;
+            color: white;
+          }
         }
       }
     }
@@ -364,7 +394,7 @@
     text-align:center;
     color:white;
     margin: 18px 0px 0px 0px;
-  }  
+  }
 }
 .camera{
   color:white;

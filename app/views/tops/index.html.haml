@@ -18,17 +18,21 @@
           .header-under-left-bland__icon
             =fa_icon'tag' , class: 'icon'
       .header-under-right
-        .header-under-right-login
-          .header-under-right-login__button
-            ログイン
-        .header-under-right-new
-          .header-under-right-new__button
-            新規会員登録
-    
-  
+        - if user_signed_in?
+          .header-under-right-sign_out
+            .header-under-right-sign_out__button
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, id: 'sign_out-btn'
+        - else
+          .header-under-right-login
+            .header-under-right-login__button
+              = link_to "ログイン", new_user_session_path, id: 'login-btn'
+            .header-under-right-new
+              .header-under-right-new__button
+                = link_to "新規会員登録", new_user_registration_path, id: 'new-btn'
+
   .main
     .main-slide
-      =image_tag("slide1.png",width:"1440" )
+      =image_tag("slide1.png", width:"1440")
     .main-item
       ピックアップカテゴリー
       .main-item-select
@@ -39,7 +43,7 @@
             - @exhibitions.each do |exhibition|
               = link_to '詳細', "/tops/#{exhibition.id}", method: :get
             .main-item-one__image
-              =image_tag("akabeko.png",width:"200" )
+              =image_tag("akabeko.png", width:"200")
             .main-item-one__textbox
               .main-item-one__text
                 赤べこ
@@ -54,7 +58,7 @@
           すべての商品を見る
 
   .application
-    =image_tag("slide.png",width:"1450" )
+    =image_tag("slide.png", width:"1450")
     
   .footer
     .footer-top
@@ -128,10 +132,10 @@
           .footer-top-country__li
             United States
     .footer-under
-      =image_tag("blacklogo.png",width:"150" )
+      =image_tag("blacklogo.png", width:"150")
 
 .sell-button
   .sell-button-text
     出品
   .camera
-    =fa_icon'camera' , class: 'icon'
+    =fa_icon'camera', class: 'icon'
