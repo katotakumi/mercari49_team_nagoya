@@ -5,7 +5,7 @@
     .showbox_text_image
       = image_tag @exhibition.image.url
     .showbox_text_list
-      %table{:border => "1"}
+      %table{border: "1"}
         %tr
           %td 出品者
           %td 
@@ -47,7 +47,7 @@
     .showbox_price__charge
       = @exhibition.shipping_charge
   .showbox_button
-    %input{:type => "submit", :value => "購入画面に進む"}
+    %input{type: "submit", value: "購入画面に進む"}
   .showbox_text
     = @exhibition.text
 
