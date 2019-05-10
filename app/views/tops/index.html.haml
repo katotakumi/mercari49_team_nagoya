@@ -36,6 +36,8 @@
           レディース新着アイテム
         .main-item-all
           .main-item-one
+            - @exhibitions.each do |exhibition|
+              = link_to '詳細', "/tops/#{exhibition.id}", method: :get
             .main-item-one__image
               =image_tag("akabeko.png",width:"200" )
             .main-item-one__textbox

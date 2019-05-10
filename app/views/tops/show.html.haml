@@ -1,0 +1,52 @@
+-# .showbox
+-#   .showbox_title
+-#     = @exhibition.title
+-#   .showbox_text
+-#     .showbox_text_image
+-#     .showbox_text_list
+-#       %table{:border => "1"}
+-#         %tr
+-#           %td 出品者
+-#           %td 
+-#         %tr
+-#           %td カテゴリー
+-#           %td 
+-#             = @exhibition.category
+-#         %tr
+-#           %td ブランド
+-#           %td
+-#         %tr
+-#           %td 商品サイズ
+-#           %td 
+-#         %tr
+-#           %td 商品の状態
+-#           %td 
+-#             = @exhibition.state
+-#         %tr
+-#           %td 配送料の負担
+-#           %td
+-#             = @exhibition.shipping_charge
+-#         %tr
+-#           %td 配送の方法
+-#           %td 
+-#         %tr
+-#           %td 配送元の地域
+-#           %td 
+-#             = @exhibition.shipping_area
+-#         %tr
+-#           %td 配送日の目安
+-#           %td 
+-#             = @exhibition.shipping_data
+-#   .showbox_price
+-#     .showbox_price__price
+-#       = @exhibition.price
+-#     .showbox_price__tax
+-#       税込
+-#     .showbox_price__charge
+-#       = @exhibition.shipping_charge
+-#   .showbox_button
+-#     %input{:type => "submit", :value => "購入画面に進む"}
+-#   .showbox_text
+-#     = @exhibition.text
+
+
