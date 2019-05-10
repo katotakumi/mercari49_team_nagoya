@@ -5,17 +5,26 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   # バリデーション
-  validates :nickname, presence: true
-  validates :family_name, presence: true
-  validates :last_name, presence: true
-  validates :j_family_name, presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカナ文字で入力してください' }
-  validates :j_last_name, presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカナ文字で入力してください' }
-  validates :birthday, presence: true
-  validates :prefecture, presence: true
-  validates :municipalities, presence: true
-  validates :address, presence: true
+  with_options presence: true do
+    validates :nickname
+    validates :family_name
+    validates :last_name
+    validates :birthday
+    validates :prefecture
+    validates :municipalities
+    validates :address
+    validates :expiration_date
+  end
+
+  with_options presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカナ文字で入力してください' } do
+    validates :j_family_name
+    validates :j_last_name
+  end
+
   validates :phone_number, presence: true, uniqueness: true, numericality: true
-  validates :card_number, presence: true , numericality: true
-  validates :expiration_date, presence: true
-  validates :security_number, presence: true , numericality: true
+
+  with_options presence: true, presence: true , numericality: true do
+    validates :card_number
+    validates :security_number
+  end
 end

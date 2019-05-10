@@ -76,3 +76,6 @@ gem 'devise'
 
 #デバック用
 gem "pry-rails"
+
+# マイグレーション
+gem 'squasher'
