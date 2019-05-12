@@ -6,6 +6,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :buyed_exhibition, foreign_key: "purchase_id", class_name: "Exhibition"
+  has_many :saling_exhibitions, -> { where("purchase_id is NULL") }, foreign_key: "user_id", class_name: "Exhibition"
+  has_many :sold_exhibitions, -> { where("purchase_id is not NULL") }, foreign_key: "user_id", class_name: "Exhibition"
+       
+       
   
   # バリデーション
   with_options presence: true do

@@ -47,7 +47,8 @@
     .showbox_price__charge
       = @exhibition.shipping_charge
   .showbox_button
-    %input{type: "submit", value: "購入画面に進む"}
+    = button_to "購入画面に進む", {controller: 'tops', action: 'see'}, {method: :get}
+    -# %input{type: "submit", value: "購入画面に進む", action:'see'}
   .showbox_text
     = @exhibition.text
 

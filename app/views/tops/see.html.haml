@@ -1,0 +1,11 @@
+.cheack
+  .cheack_header
+    .cheack_main_title
+      本当に購入しますか
+    .cheack_main_item
+      
+= form_tag("/tops/#{@exhibition.id}/buy", method: :patch ) do
+  %label
+  %input{:type => "submit", :value => "送信"}/
+
+ 
