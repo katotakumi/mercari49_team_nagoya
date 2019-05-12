@@ -5,6 +5,7 @@
   width: 100vw;
 }
 
+// 部分テンプレートに移動
 .header {
   box-sizing: border-box;
   width: 100vw;
@@ -80,11 +81,13 @@
           color:red;
         }
       }
-    } 
+    }
     &-right{
       height:40px;
-      width:400px;
+      min-width: 400px;
       float: left;
+      display: flex;
+      // ログインしていない時
       &-login{
         height:40px;
         width: 200px;
@@ -130,6 +133,35 @@
           }
         }
       }
+      // ログインしている時
+      &-news{
+        padding: 0 14px;
+        font-weight: 300;
+        font-size: 14px;
+        display: flex;
+      }
+      &-todo{
+        padding: 0 14px;
+        font-weight: 300;
+        font-size: 14px;
+        display: flex;
+      }
+      &-mypage{
+        padding: 0 14px;
+        font-weight: 300;
+        font-size: 14px;
+        display: flex;
+        &__icon{
+          padding-right: 5px;
+          font-size: 14px;
+        }
+        &__button{
+          #mypage-link{
+            text-decoration: none;
+          }
+        }
+      }
+      // マイページに移動予定
       &-sign_out{
         height:40px;
         width: 200px;
@@ -154,7 +186,7 @@
     }
   }
 }
-  
+
 .main {
   box-sizing: border-box;
   width: 100vw;
@@ -258,7 +290,8 @@
   height: 270px;
   padding:10px;
 }
-    
+
+// 部分テンプレートに移動
 .footer {
   box-sizing: border-box;
   width:100vw;

@@ -1,0 +1,39 @@
+.wrapper
+  = render "shared/header"
+  .mypage
+    .mypage__contain
+      .mypage__contain__user-icon
+        .mypage__contain__user-icon__avatar
+        =fa_icon 'smile-o' , class: 'icon'
+        .mypage__contain__user-icon__nickname
+          = @current_user.nickname
+        .mypage__contain__user-icon__mypage-number 評価 0 出品数 0
+      .mypage__contain__news-todo
+        .mypage__contain__news-todo__tabs
+          .mypage__contain__news-todo__tabs__news お知らせ
+          .mypage__contain__news-todo__tabs__todo やることリスト
+        .mypage__contain__news-todo__contents
+          .mypage__contain__news-todo__contents__item-list
+            .mypage__contain__news-todo__contents__item-list__message 事務局から個別メッセージ「ログイン通知」
+            .mypage__contain__news-todo__contents__item-list__message 《7日間限定》購入金額から“最大8％“をポイントバック！
+            .mypage__contain__news-todo__contents__item-list__message 【注意喚起】メルカリ外部への誘導にご注意ください
+            .mypage__contain__news-todo__contents__item-list__message 事務局から個別メッセージ「ログイン通知」
+            .mypage__contain__news-todo__contents__item-list__message 明日、300Pの有効期限が切れます
+            .mypage__contain__news-todo__contents__item-list__all
+              .mypage__contain__news-todo__contents__item-list__all__button 一覧を見る
+      .mypage__contain__buy
+        .mypage__contain__buy__head 購入した商品
+        .mypage__contain__buy__tabs
+          .mypage__contain__buy__tabs__trading 取引中
+          .mypage__contain__buy__tabs__traded 過去の取引
+        .mypage__contain__buy__content
+          = image_tag("buying.png", width: 300)
+    
+    = render "shared/mypage-sidebar"
+  = render "shared/application"
+  = render "shared/footer"
+.sell-button
+  .sell-button-text
+    出品
+  .camera
+    =fa_icon'camera', class: 'icon'
