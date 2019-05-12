@@ -5,6 +5,7 @@
   width: 100vw;
 }
 
+// 部分テンプレートに移動
 .header {
   box-sizing: border-box;
   width: 100vw;
@@ -80,14 +81,16 @@
           color:red;
         }
       }
-    } 
+    }
     &-right{
       height:40px;
-      width:400px;
+      min-width: 400px;
       float: left;
+      display: flex;
+      // ログインしていない時
       &-login{
         height:40px;
-        width: 100px;
+        width: 200px;
         float: left;
         &__button {
           box-sizing: border-box;
@@ -100,12 +103,17 @@
           color: white;
           float:left;
           font-size: 13px;
+          #login-btn{
+            text-decoration: none;
+            color: white;
+          }
         }
       }
       &-new{
         height:30px;
         width: 100px;
-        float: left;
+        float: right;
+        padding-left: 10px;
         &__button{
           box-sizing: border-box;
           border-style:solid;
@@ -119,12 +127,66 @@
           color: #0099e8;
           font-size: 13px;
           float: left;
+          #new-btn{
+            text-decoration: none;
+            color: #0099e8;
+          }
+        }
+      }
+      // ログインしている時
+      &-news{
+        padding: 0 14px;
+        font-weight: 300;
+        font-size: 14px;
+        display: flex;
+      }
+      &-todo{
+        padding: 0 14px;
+        font-weight: 300;
+        font-size: 14px;
+        display: flex;
+      }
+      &-mypage{
+        padding: 0 14px;
+        font-weight: 300;
+        font-size: 14px;
+        display: flex;
+        &__icon{
+          padding-right: 5px;
+          font-size: 14px;
+        }
+        &__button{
+          #mypage-link{
+            text-decoration: none;
+          }
+        }
+      }
+      // マイページに移動予定
+      &-sign_out{
+        height:40px;
+        width: 200px;
+        float: left;
+        &__button {
+          box-sizing: border-box;
+          height: 35px;
+          width: 100px;
+          border-radius: 5px;
+          background-color:red;
+          padding: 8px;
+          text-align: center;
+          color: white;
+          float:left;
+          font-size: 13px;
+          #sign_out-btn{
+            text-decoration: none;
+            color: white;
+          }
         }
       }
     }
   }
 }
-  
+
 .main {
   box-sizing: border-box;
   width: 100vw;
@@ -228,7 +290,8 @@
   height: 270px;
   padding:10px;
 }
-    
+
+// 部分テンプレートに移動
 .footer {
   box-sizing: border-box;
   width:100vw;
@@ -364,7 +427,7 @@
     text-align:center;
     color:white;
     margin: 18px 0px 0px 0px;
-  }  
+  }
 }
 .camera{
   color:white;
