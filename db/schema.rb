@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190510150508) do
+ActiveRecord::Schema.define(version: 20190513074407) do
 
   create_table "exhibitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20190510150508) do
     t.string   "last_name",              default: "", null: false
     t.string   "j_family_name",          default: "", null: false
     t.string   "j_last_name",            default: "", null: false
-    t.datetime "birthday",                            null: false
+    t.date     "birthday",                            null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

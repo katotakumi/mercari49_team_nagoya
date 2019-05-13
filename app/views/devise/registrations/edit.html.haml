@@ -1,36 +1,119 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
+= render "shared/header"
+.error-message
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+  .update-user
+    .update-user__panel
+      .update-user__panel__title 本人情報の確認
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :お名前
+          %br/
+        .update-user__panel__group__name
+          = current_user.family_name + ' ' + current_user.last_name
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :お名前（カナ）
+          %br/
+        .update-user__panel__group__name
+          = current_user.j_family_name + ' ' + current_user.j_last_name
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :生年月日
+          %br/
+        .update-user__panel__group__name
+          = current_user.birthday
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :メールアドレス
+        %br/
+        .update-user__panel__group__form
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"PC・携帯どちらでも可"
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %div
+            Currently waiting confirmation for: #{resource.unconfirmed_email}
+      .update-user__panel__group
+        .update-user__panel__group__info メールアドレスを変更すると確認メールが送信されます。<br>メール内のURLをクリックすると変更完了です。
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :パスワード
+          %br/
+        .update-user__panel__group__form
+          = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上"
+          - if @minimum_password_length
+            %br/
+            %em
+              = @minimum_password_length
+              文字以上入力してください
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :パスワード（確認）
+          %br/
+        .update-user__panel__group__form
+          = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "6文字以上"
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :現在のパスワード
+          %br/
+        .update-user__panel__group__form
+          = f.password_field :current_password, autocomplete: "current-password", placeholder: "6文字以上"
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :都道府県
+          %br/
+        .update-user__panel__group__name
+          = f.collection_select :prefecture, Prefecture.all, :id, :name,autofocus: true, autocomplete: "prefecture", class: "form-control"
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :市区町村
+          %br/
+        .update-user__panel__group__form
+          = f.text_field :municipalities, autofocus: true, autocomplete: "municipalities", placeholder: "例）横浜市緑区"
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :番地
+          %br/
+        .update-user__panel__group__form
+          = f.text_field :address, autofocus: true, autocomplete: "address", placeholder: "例）青山1-1-1"
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :建物名
+          %br/
+        .update-user__panel__group__form
+          = f.text_field :building, autofocus: true, autocomplete: "building", placeholder: "例）柳ビル 103"
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :電話番号
+          %br/
+        .update-user__panel__group__form
+          = f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "例）09012345678", maxlength: 11
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :カード番号
+          %br/
+        .update-user__panel__group__form
+          = f.text_field :card_number, autofocus: true, autocomplete: "card_number", placeholder: "半角数字のみ", maxlength: 16
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :有効期限
+          %br/
+        .update-user__panel__group__select
+          = f.date_select :expiration_date, autofocus: true, autocomplete: "expiration_date", class: "sign-up__panel__group__select__form-control", start_year:(Time.now.year), discard_day: true, include_blank: true, use_month_numbers: true,date_separator: '/'
+      .update-user__panel__group
+        .update-user__panel__group__credit
+        = image_tag("creditcard.png", width: 400)
+      .update-user__panel__group
+        .update-user__panel__group__label
+          = f.label :セキュリティコード
+          %br/
+        .update-user__panel__group__form
+          = f.text_field :security_number, autofocus: true, autocomplete: "security_number", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: 4
+      .update-user__panel__group
+        .update-user__panel__group__button
+          = f.submit "変更する", class: 'btn'
+  = render "shared/application"
+  = render "shared/footer"
+-# %h3 Cancel my account
+-# %p
+-#   Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+-# = link_to "Back", :back

@@ -1,34 +1,36 @@
-.mypage__side-bar
-  .mypage__side-bar__list
-    .mypage__side-bar__list__box
-      .mypage__side-bar__list__box__mypage
-        = link_to "マイページ", user_path(current_user.id), id: 'mypage-link'
-      .mypage__side-bar__list__box__news お知らせ
-      .mypage__side-bar__list__box__todo やることリスト
-      .mypage__side-bar__list__box__good いいね！一覧
-      .mypage__side-bar__list__box__exhibition
-        = link_to "出品する", new_top_path, id: 'exhibition-link'
-      .mypage__side-bar__list__box__display 出品した商品-出品中
-      .mypage__side-bar__list__box__exhibition-trade 出品した商品-取引中
-      .mypage__side-bar__list__box__sold 出品した商品-売却済み
-      .mypage__side-bar__list__box__exhibition-buy 購入した商品-取引中
-      .mypage__side-bar__list__box__news-list ニュース一覧
-      .mypage__side-bar__list__box__evaluate-list 評価一覧
-      .mypage__side-bar__list__box__guide ガイド
-      .mypage__side-bar__list__box__contact お問い合わせ
-  .mypage__side-bar__marpay
-    .mypage__side-bar__marpay__box
-      .mypage__side-bar__marpay__box__label メルペイ
-      .mypage__side-bar__marpay__box__sale-transfer 売上・振込申請
-      .mypage__side-bar__marpay__box__point ポイント
-  .mypage__side-bar__setting
-    .mypage__side-bar__setting__box
-      .mypage__side-bar__setting__box__label 設定
-      .mypage__side-bar__setting__box__profile プロフィール
-      .mypage__side-bar__setting__box__change-adress 発送元・お届け先住所変更
-      .mypage__side-bar__setting__box__payment 支払い方法
-      .mypage__side-bar__setting__box__email-password メール/パスワード
-      .mypage__side-bar__setting__box__user-info 本人情報
-      .mypage__side-bar__setting__box__telephone-number 電話番号の確認
-      .mypage__side-bar__setting__box__sign-out
-        = link_to "ログアウト", logout_users_path, id: 'logout_link'
+.mypage
+  .mypage__side-bar
+    .mypage__side-bar__list
+      .mypage__side-bar__list__box
+        .mypage__side-bar__list__box__mypage
+          = link_to "マイページ", user_path(current_user.id), id: 'mypage-link'
+        .mypage__side-bar__list__box__news お知らせ
+        .mypage__side-bar__list__box__todo やることリスト
+        .mypage__side-bar__list__box__good いいね！一覧
+        .mypage__side-bar__list__box__exhibition
+          = link_to "出品する", new_top_path, id: 'exhibition-link'
+        .mypage__side-bar__list__box__display 出品した商品-出品中
+        .mypage__side-bar__list__box__exhibition-trade 出品した商品-取引中
+        .mypage__side-bar__list__box__sold 出品した商品-売却済み
+        .mypage__side-bar__list__box__exhibition-buy 購入した商品-取引中
+        .mypage__side-bar__list__box__news-list ニュース一覧
+        .mypage__side-bar__list__box__evaluate-list 評価一覧
+        .mypage__side-bar__list__box__guide ガイド
+        .mypage__side-bar__list__box__contact お問い合わせ
+    .mypage__side-bar__marpay
+      .mypage__side-bar__marpay__box
+        .mypage__side-bar__marpay__box__label メルペイ
+        .mypage__side-bar__marpay__box__sale-transfer 売上・振込申請
+        .mypage__side-bar__marpay__box__point ポイント
+    .mypage__side-bar__setting
+      .mypage__side-bar__setting__box
+        .mypage__side-bar__setting__box__label 設定
+        .mypage__side-bar__setting__box__profile プロフィール
+        .mypage__side-bar__setting__box__change-adress 発送元・お届け先住所変更
+        .mypage__side-bar__setting__box__payment 支払い方法
+        .mypage__side-bar__setting__box__email-password メール/パスワード
+        .mypage__side-bar__setting__box__user-info
+          = link_to "本人情報", edit_user_registration_path, id: 'edit_link'
+        .mypage__side-bar__setting__box__telephone-number 電話番号の確認
+        .mypage__side-bar__setting__box__sign-out
+          = link_to "ログアウト", logout_users_path, id: 'logout_link'

@@ -1,0 +1,16 @@
+.wrapper
+  = render "shared/header"
+  = render "shared/mypage-sidebar"
+  .logout
+    .logout__contain
+      .logout__contain__sign_out
+        .logout__contain__sign_out__button
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, id: 'sign_out-btn'
+  = render "shared/application"
+  = render "shared/footer"
+
+  -# .sell-button
+  -#   .sell-button-text
+  -#     出品
+  -#   .camera
+  -#     =fa_icon'camera', class: 'icon'
