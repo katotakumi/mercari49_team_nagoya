@@ -16,7 +16,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/edit
   # def edit
-  #   binding.pry
   #   super
   #   @user = User.find(params[:id])
   # end
