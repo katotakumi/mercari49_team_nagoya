@@ -28,13 +28,9 @@
           .header-under-right-todo__button やることリスト
         .header-under-right-mypage
           .header-under-right-mypage__icon
-            -# avatarは余裕があったら配置
             =fa_icon 'smile-o' , class: 'icon'
           .header-under-right-mypage__button
             = link_to "マイページ", user_path(current_user.id), id: 'mypage-link'
-        .header-under-right-sign_out
-          .header-under-right-sign_out__button
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, id: 'sign_out-btn'
       - else
         .header-under-right-login
           .header-under-right-login__button

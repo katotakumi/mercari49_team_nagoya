@@ -161,28 +161,6 @@
           }
         }
       }
-      // マイページに移動予定
-      &-sign_out{
-        height:40px;
-        width: 200px;
-        float: left;
-        &__button {
-          box-sizing: border-box;
-          height: 35px;
-          width: 100px;
-          border-radius: 5px;
-          background-color:red;
-          padding: 8px;
-          text-align: center;
-          color: white;
-          float:left;
-          font-size: 13px;
-          #sign_out-btn{
-            text-decoration: none;
-            color: white;
-          }
-        }
-      }
     }
   }
 }

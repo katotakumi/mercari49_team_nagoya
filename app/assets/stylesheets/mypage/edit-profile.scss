@@ -1,0 +1,52 @@
+.update-user{
+  min-height: 1800px;
+  background-color: #f5f5f5;
+  display: flex;
+  padding-left: 300px;
+  margin: 0 auto;
+  &__panel{
+    background-color: #fff;
+    width: 800px;
+    height: 2000px;
+
+    &__title{
+      text-align: center;
+      padding: 32px 16px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    &__group{
+      padding-left: 200px;
+      padding-bottom: 30px;
+      &__label{
+        font-weight: 550;
+        display: flex;
+        text-align: center;
+      }
+      &__form{
+        #user_email, #user_password, #user_password_confirmation, #user_current_password,#user_municipalities ,#user_address, #user_building, #user_phone_number, #user_card_number, #user_security_number{
+          width: 300px;
+          height: 30px;
+        }
+      }
+      &__info{
+        font-size: 12px;
+        margin: 8px 0 0;
+        padding: 0;
+        color: #666666;
+      }
+      &__button{
+        .btn{
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          margin: 30px 0 0;
+          text-align: center;
+          width: 350px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+  

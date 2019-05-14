@@ -17,13 +17,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/edit
   # def edit
   #   super
+  #   @user = User.find(params[:id])
   # end
 
   # PUT /resource
   # def update
   #   super
+  #   @user = User.find(params[:id])
+  #   if user.id == current_user.id
+  #     user.update(user_params)
+  #   end
   # end
 
+# private
+#   def user_params
+#     params.permit(:prefecture, :municipalities, :address, :building, :phone_number, :card_number, :expiration_date, :security_number)
+#   end
   # DELETE /resource
   # def destroy
   #   super
