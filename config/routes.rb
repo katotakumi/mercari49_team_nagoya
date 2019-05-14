@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     member do
       get 'see'
       patch 'buy'
+      get 'buyed'
     end
   end
 
