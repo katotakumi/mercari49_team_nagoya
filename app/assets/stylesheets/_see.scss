@@ -1,0 +1,79 @@
+ .cheack{
+  box-sizing: border-box;
+  width:100%;
+  height:1000px;
+  padding:0px 300px;
+  &_header{
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    background-color:white;
+    color: black;
+    font-size:24px;
+    font-weight: bold; 
+    text-align: center;
+  }
+  &_main_title{
+    box-sizing: border-box;
+    width:100%;
+    height:10%;
+    padding:30px;
+    border-bottom: dashed 1.2px #dcdcdc;
+  }
+  &_main_item{
+    box-sizing: border-box;
+    width:100%;
+    height:50%;
+    padding:30px;
+    &_image{
+      box-sizing: border-box;
+      width:100%;
+      height:30%;
+    }
+    &_title{
+      box-sizing: border-box;
+      width:100%;
+      height:10%;
+      font-size:18px;
+    }
+    &_pricebox{
+      box-sizing: border-box;
+      width:100%;
+      height:30%;
+      &__price{
+        box-sizing: border-box;
+        width:50%;
+        height:30%;
+        float: left;
+        text-align: right;
+      }
+      &__tax{
+        box-sizing: border-box;
+        width:50%;
+        height:30%;
+        float: left;
+        font-size:15px;
+        font-weight:normal;
+        text-align: left;
+      }
+    }
+    &_button{
+      box-sizing: border-box;
+      width: 100%;
+      height:10%;
+      padding:20px;
+    }
+    .cheack_main_item_button input{
+      box-sizing: border-box;
+      width: 100%;
+      height:40%;
+      background-color: red;
+      color: white;
+      text-align: center;
+      border:none;
+      padding:20px;
+      font-size:25px;
+      font-weight: bold; 
+    }
+  }  
+}

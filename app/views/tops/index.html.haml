@@ -29,6 +29,7 @@
   = render "shared/application"
   = render "shared/footer"
 .sell-button
+  = button_to "出品", {controller: 'tops', action: 'new'}, {method: :get}
   .sell-button-text
     出品
   .camera

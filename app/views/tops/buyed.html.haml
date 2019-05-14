@@ -48,8 +48,8 @@
       (税込)
     .showbox_price__charge
       = @exhibition.shipping_charge
-  .showbox_button
-    = button_to "購入画面に進む", {controller: 'tops', action: 'see'}, {method: :get}
+  .buyedbox_button
+    %input{:type => "submit", :value => "売り切れました"}    
   .showbox_text
     = @exhibition.text
 = render "shared/application"

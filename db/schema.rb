@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20190513074407) do
     t.string   "price"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.integer  "purchase_id"
     t.index ["user_id"], name: "index_exhibitions_on_user_id", using: :btree
   end
 
@@ -55,4 +56,7 @@ ActiveRecord::Schema.define(version: 20190513074407) do
   end
 
   add_foreign_key "exhibitions", "users"
+  has_many :buyed_exhibition, foreign_key: "purchase_id", class_name: "Exhibition"
+  has_many :saling_exhibitions, -> { where("purchase_id is NULL") }, foreign_key: "user_id", class_name: "Exhibition"
+  has_many :sold_exhibitions, -> { where("purchase_id is not NULL") }, foreign_key: "user_id", class_name: "Exhibition"
 end
