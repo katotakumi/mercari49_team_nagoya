@@ -12,5 +12,15 @@ Rails.application.routes.draw do
       get :logout
     end
   end
-  resources :tops, only: [:index, :new, :create, :edit, :update] 
+  resources :tops, only: [:index, :new, :create, :show, :edit, :update] 
+
+  resources :tops do
+    member do
+      get 'see'
+      patch 'buy'
+      get 'buyed'
+    end
+  end
+
+
 end

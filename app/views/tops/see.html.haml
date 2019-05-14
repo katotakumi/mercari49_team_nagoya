@@ -1,0 +1,22 @@
+= render "devise/shared/header-login"
+.cheack
+  .cheack_header
+    .cheack_main_title
+      購入を確定しますか?
+    .cheack_main_item
+      .cheack_main_item_image
+        = image_tag @exhibition.image.url
+      .cheack_main_item_title
+        = @exhibition.title
+      .cheack_main_item_pricebox
+        .cheack_main_item_pricebox__price
+          ¥
+          =@exhibition.price
+        .cheack_main_item_pricebox__tax
+          =@exhibition.shipping_charge
+      .cheack_main_item_button      
+        = form_tag("/tops/#{@exhibition.id}/buy", method: :patch ) do
+          %label
+          %input{:type => "submit", :value => "購入する"}
+= render "devise/shared/footer-login"
+ 
