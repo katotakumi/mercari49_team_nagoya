@@ -70,6 +70,7 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'active_hash'
 gem 'rails-i18n'
+gem 'mini_magick'
 
 # ユーザー関連
 gem 'devise'

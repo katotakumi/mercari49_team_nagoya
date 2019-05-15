@@ -5,7 +5,7 @@
       購入を確定しますか?
     .cheack_main_item
       .cheack_main_item_image
-        = image_tag @exhibition.image.url
+        = image_tag @exhibition.image.url,:size =>'150x150'
       .cheack_main_item_title
         = @exhibition.title
       .cheack_main_item_pricebox

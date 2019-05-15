@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get :logout
     end
   end
-  resources :tops, only: [:index, :new, :create, :show, :edit, :update] 
+  resources :tops, only: [:index, :new, :create, :show, :edit, :update, :destroy] 
 
   resources :tops do
     member do

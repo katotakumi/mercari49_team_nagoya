@@ -22,7 +22,7 @@
                   .sellmain-under-upload-box-image__text
                     ドラックアンドドロップ
                     またはクリックしてファイルをアップロード
-                = f.file_field :image, :class => "item-contents__image_drop-box_click", :name =>"image"
+                = f.file_field :image, :class => "sellmain-under-upload-box-image", :name =>"image"
 
 
 
@@ -40,7 +40,7 @@
               .sellmain-under-content-text__red
                 必須
             .sellmain-under-content-text-title
-              %input.sellmain-under-content-text-title{:name =>"text", :placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :type => "text"}/ 
+              %input.sellmain-under-content-text-title{:name =>"text", :placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）", :type => "text"}
             
         
           .sellmain-under-sub-box
@@ -127,9 +127,9 @@
                   価格
                 .sellmain-under-sale-box-name-label__red
                   必須
-                .sallmain-under-sale-box-name-input
-                  ¥
-                  %input.input{:name =>"price", :placeholder => "例）300", :type => "text"}/ 
+              .sallmain-under-sale-box-name-input
+                ¥
+                %input.input{:name =>"price", :placeholder => "例）300", :type => "text"}/ 
                  
 
             
@@ -152,6 +152,4 @@
               %input{:type => "submit", :value => "もどる"}
 
   .sellfooter
-    .sellfooter-text
-    .sellfooter-logo
-      =image_tag("grayogo.png",width:"120" )
+    = render "devise/shared/footer-login"
