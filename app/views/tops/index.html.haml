@@ -10,7 +10,26 @@
           新着アイテム
         .main-item-all
           .main-item-one
+            -# - @exhibitions.each do |exhibition|
+            -#   = link_to @exhibitions_path do
+            -#     = image_tag("#{exhibition.id}.jpg")
+            -#   .main-item-one__image
+            -# .main-item-one__textbox
+            -#   -# .main-item-one__text
+            -#   -#   =@exhibition.title
+            -#   -#   .main-item-one__prices
+            -#   -#     .main-item-one__price
+            -#   -#       =@exhibition.price
+            -#       .main-item-one__good
+            -#         =fa_icon'heart' , class: 'icon'
+            -#       .main-item-one__tax
+            -#         (税込)
+            -#   = exhibition.text
             - @exhibitions.each do |exhibition|
+<<<<<<< HEAD
+              = link_to '詳細', "/tops/#{exhibition.id}", method: :get
+            
+=======
               .main-item-one__textbox
                 .main-item-one__textbox__image
                   = link_to image_tag(exhibition.image, width:"200",height: "200"), "/tops/#{exhibition.id}", method: :get
@@ -22,12 +41,18 @@
                   =fa_icon 'heart' , class: 'icon'
                 .main-item-one__textbox__tax
                   (税込)
+>>>>>>> master
         .main-item-one-all-view
           すべての商品を見る
   = render "shared/application"
   = render "shared/footer"
 .sell-button
+<<<<<<< HEAD
+  = button_to "出品", {controller: 'tops', action: 'new'}, {method: :get, class: "sell-button"}
+  .sell-button-text
+=======
   .sell-button-text
     = link_to "出品", new_top_path, id: 'btn'
+>>>>>>> master
   .camera
     =fa_icon'camera', class: 'icon'
