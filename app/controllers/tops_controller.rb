@@ -64,8 +64,4 @@ class TopsController < ApplicationController
     def redirect_to_index
       redirect_to action: :index unless user_signed_in?
     end
-
-    def redirect_to_index
-      redirect_to action: :index unless user_signed_in?
-    end
 end
