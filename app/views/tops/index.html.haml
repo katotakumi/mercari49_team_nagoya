@@ -7,30 +7,27 @@
       ピックアップカテゴリー
       .main-item-select
         .main-item-select__name
-          レディース新着アイテム
+          新着アイテム
         .main-item-all
           .main-item-one
             - @exhibitions.each do |exhibition|
-              = link_to '詳細', "/tops/#{exhibition.id}", method: :get
-            .main-item-one__image
-              =image_tag("akabeko.png", width:"200")
-            .main-item-one__textbox
-              .main-item-one__text
-                赤べこ
-                .main-item-one__prices
-                  .main-item-one__price
-                    ¥20,000
-                  .main-item-one__good
-                    =fa_icon'heart' , class: 'icon'
-                  .main-item-one__tax
-                    (税込)
+              .main-item-one__textbox
+                .main-item-one__textbox__image
+                  = link_to image_tag(exhibition.image, width:"200",height: "200"), "/tops/#{exhibition.id}", method: :get
+                .main-item-one__textbox__text
+                  = exhibition.title
+                .main-item-one__textbox__price
+                  = "¥" + exhibition.price
+                .main-item-one__textbox__good
+                  =fa_icon 'heart' , class: 'icon'
+                .main-item-one__textbox__tax
+                  (税込)
         .main-item-one-all-view
           すべての商品を見る
   = render "shared/application"
   = render "shared/footer"
 .sell-button
-  = button_to "出品", {controller: 'tops', action: 'new'}, {method: :get}
   .sell-button-text
-    出品
+    = link_to "出品", "/tops/new", id: 'btn'
   .camera
     =fa_icon'camera', class: 'icon'
