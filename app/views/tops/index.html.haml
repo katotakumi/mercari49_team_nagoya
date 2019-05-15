@@ -10,21 +10,6 @@
           新着アイテム
         .main-item-all
           .main-item-one
-            -# - @exhibitions.each do |exhibition|
-            -#   = link_to @exhibitions_path do
-            -#     = image_tag("#{exhibition.id}.jpg")
-            -#   .main-item-one__image
-            -# .main-item-one__textbox
-            -#   -# .main-item-one__text
-            -#   -#   =@exhibition.title
-            -#   -#   .main-item-one__prices
-            -#   -#     .main-item-one__price
-            -#   -#       =@exhibition.price
-            -#       .main-item-one__good
-            -#         =fa_icon'heart' , class: 'icon'
-            -#       .main-item-one__tax
-            -#         (税込)
-            -#   = exhibition.text
             - @exhibitions.each do |exhibition|
               .main-item-one__textbox
                 .main-item-one__textbox__image
