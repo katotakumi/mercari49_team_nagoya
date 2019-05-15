@@ -3,8 +3,11 @@
   .showbox_title
     = @exhibition.title
   .showbox_text
+    = link_to("編集", "/exhibitions/#{@exhibition.id}/edit")
+    = link_to("削除", "/exhibitions/#{@exhibition.id}/destroy", {method: "post"})
+
     .showbox_text_image
-      = image_tag @exhibition.image.url
+      = image_tag @exhibition.image.url ,:size =>'380x360'
     .showbox_text_list
       %table{border: "1"}
         %tr

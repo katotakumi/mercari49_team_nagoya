@@ -398,6 +398,9 @@
   background-color: red;
   position:sticky;
   float: right;
+  font-size:25px;
+  text-align:center;
+  color:white;
   bottom: 5px;
   &-text {
     box-sizing: border-box;
@@ -406,9 +409,12 @@
     color:white;
     margin: 18px 0px 0px 0px;
   }
-}
 .camera{
+  box-sizing: border-box;
+  height:200px;
+  width:200px;
   color:white;
   font-size: 4em;
   text-align: center;
 }
+  }
