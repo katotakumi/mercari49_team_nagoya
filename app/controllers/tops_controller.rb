@@ -32,15 +32,10 @@ class TopsController < ApplicationController
   end
 
   def edit
-    @exhibition = Exhibition.find(params[:id]) 
+    
   end
 
   def update
-    @exhibition = Exhibition.find(params[:id]) 
-    if exhibition.user_id == current_user.id
-      tweet.update(exhibition_params)
-    end
-
   end
 
   def see
