@@ -71,6 +71,7 @@ gem 'fog-aws'
 gem 'active_hash'
 gem 'rails-i18n'
 gem 'mini_magick'
+gem 'kaminari'
 
 # ユーザー関連
 gem 'devise'
