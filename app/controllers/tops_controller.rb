@@ -1,7 +1,7 @@
 class TopsController < ApplicationController
   before_action :redirect_to_index, except: [:index, :show]
   def index
-    @exhibitions = Exhibition.order("created_at DESC").limit(4)
+    @exhibitions = Exhibition.order("created_at DESC").page(params[:page]).per(4)
   end
 
   def new
