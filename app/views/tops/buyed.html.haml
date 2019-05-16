@@ -5,6 +5,7 @@
   .showbox_text
     .showbox_text_image
       = image_tag @exhibition.image.url,:size =>'380x360'
+
     .showbox_text_list
       %table{border: "1"}
         %tr
@@ -49,7 +50,9 @@
     .showbox_price__charge
       = @exhibition.shipping_charge
   .buyedbox_button
-    %input{:type => "submit", :value => "売り切れました"}    
+    %input{:type => "submit", :value => "売り切れました"}
+  .buyedbox_button_gray
+    %input{:type => "submit",:onclick=>"history.back()", :value => "トップページへ戻る"}      
   .showbox_text
     = @exhibition.text
 = render "shared/application"

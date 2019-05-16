@@ -3,4 +3,7 @@
   .cheack_header
     .cheack_main_title
       購入完了しました。
+    .cheack_main_back
+      = link_to 'トップページへ戻る' , {controller: :tops, action: :index} , id: :link, classl: :heack_main_back
+
 = render "devise/shared/footer-login"
